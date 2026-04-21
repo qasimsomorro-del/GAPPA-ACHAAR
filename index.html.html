@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GAPPA-ACHAAR</title>
+
+<style>
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#fff;
+}
+
+/* HEADER */
+header{
+  background: linear-gradient(135deg,#ffb347,#ffcc33);
+  text-align:center;
+  padding:40px 20px;
+}
+
+header h1{
+  margin:0;
+  font-size: 55px;
+  font-weight: 900;
+  color: #111;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
+
+header p{
+  margin-top:10px;
+  font-weight:600;
+  color: #333;
+}
+
+/* HERO SECTION WITH PICKLE BACKGROUND */
+.hero{
+  text-align:center;
+  padding: 100px 20px;
+  /* Yahan Pickles ki image add ki hai aur overlay lagaya hai */
+  background: linear-gradient(rgba(255, 243, 196, 0.8), rgba(255, 243, 196, 0.8)), 
+              url('Achaar.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.hero h2{
+  font-size: 36px;
+  color: #111;
+  margin-bottom: 25px;
+}
+
+.hero button{
+  padding: 15px 40px;
+  background: black;
+  color: #ffcc33;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.hero button:hover{
+  transform: scale(1.05);
+  background: #222;
+}
+
+/* SLIDER SECTION */
+.slider{
+  background: #222;
+  color: #ffcc33;
+  text-align: center;
+  padding: 40px;
+  border-top: 4px solid #ffcc33;
+}
+
+/* MENU SECTION */
+.menu{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 60px 20px;
+}
+
+.card{
+  width: 280px;
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.card h3{
+  color: #d35400;
+  font-size: 24px;
+}
+
+/* CONTACT SECTION */
+.contact{
+  background: #28a745;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.contact button{
+  padding: 12px 30px;
+  background: white;
+  color: #28a745;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>GAPPA-ACHAAR</h1>
+  <p>100% Homemade Traditional Taste</p>
+</header>
+
+<div class="hero">
+  <h2>Khattay Meethay Gol Gappay aur Chatpatay Achaar!</h2>
+  <a href="https://wa.me/923423547673">
+    <button>Order Now</button>
+  </a>
+</div>
+
+<div class="slider">
+  <h2 id="t">100% Natural Achar</h2>
+</div>
+
+<div class="menu">
+  <div class="card">
+    <div style="font-size: 40px;">🥘</div>
+    <h3>Gol Gappay</h3>
+    <p>Traditional homemade street taste with spicy pani</p>
+  </div>
+
+  <div class="card">
+    <div style="font-size: 40px;">🥭</div>
+    <h3>Mango Chatni</h3>
+    <p>Sweet & spicy desi chutney made with love</p>
+  </div>
+
+  <div class="card">
+    <div style="font-size: 40px;">🏺</div>
+    <h3>Carry Achar</h3>
+    <p>Fresh homemade recipe with organic spices</p>
+  </div>
+</div>
+
+<div class="contact">
+  <h2>Contact Us</h2>
+  <p>WhatsApp: <strong>+923423547673</strong></p>
+  <p>Delivery All Over Pakistan 🇵🇰</p>
+
+  <a href="https://wa.me/923423547673">
+    <button>Order on WhatsApp</button>
+  </a>
+</div>
+
+<script>
+let text = [
+"100% Natural Achar",
+"Traditional Taste",
+"Fresh Homemade Food",
+"Delivery Available"
+];
+
+let i = 0;
+
+setInterval(()=>{
+  document.getElementById("t").innerText = text[i];
+  i = (i+1) % text.length;
+},3000);
+</script>
+
+</body>
+</html>
